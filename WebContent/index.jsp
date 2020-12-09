@@ -7,14 +7,12 @@
 <title>Insert title here</title>
 </head>
 <link rel="stylesheet" href="css/css.css">
-<%
-	String section = request.getParameter("section") != null ? request.getParameter("section") : "";
-%>
 <body>
 	<%@ include file="static/header.jsp" %>
 	<%@ include file="static/nav.jsp" %>
-	
+	<section>
 	<%
+		String section = request.getParameter("section") != null ? request.getParameter("section") : "";
 		switch(section) {
 			case "insert_audition" :
 				%><%@ include file="page/insert_audition.jsp" %><%
@@ -32,7 +30,7 @@
 				%><%@ include file="static/index.jsp" %><%
 		}
 	%>
-	
+	</section>
 	<%@ include file="static/footer.jsp" %>
 </body>
 </html>
